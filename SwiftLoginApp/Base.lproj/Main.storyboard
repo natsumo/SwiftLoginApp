@@ -73,7 +73,7 @@
                                 </constraints>
                                 <state key="normal" title="LoginBtn" image="Login"/>
                                 <connections>
-                                    <action selector="LoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JAx-Kp-rfJ"/>
+                                    <action selector="loginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cul-Dk-7hZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc7-aa-VYX">
@@ -121,9 +121,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Adl-m1-44D"/>
                     <connections>
-                        <outlet property="PasswordTextField" destination="JLM-Sf-91G" id="rA8-L0-6Vq"/>
-                        <outlet property="UserNameTextField" destination="x3c-MC-W4n" id="Naj-v1-KFI"/>
                         <outlet property="errorLabel" destination="Ggq-RR-99S" id="mgu-gV-5Hq"/>
+                        <outlet property="passwordTextField" destination="JLM-Sf-91G" id="Y0L-qy-peU"/>
+                        <outlet property="userNameTextField" destination="x3c-MC-W4n" id="TGf-Ia-9Kv"/>
                         <segue destination="S3j-ZT-hjX" kind="push" identifier="LtoS" id="PdY-2R-TAn"/>
                         <segue destination="9X5-rB-LjZ" kind="modal" identifier="login" id="Xzf-qR-6eU"/>
                     </connections>
@@ -200,7 +200,7 @@
                                 </constraints>
                                 <state key="normal" title="SignUpBtn" image="SignUp"/>
                                 <connections>
-                                    <action selector="SignUpBtn:" destination="S3j-ZT-hjX" eventType="touchUpInside" id="f9Q-as-jf3"/>
+                                    <action selector="signUpBtn:" destination="S3j-ZT-hjX" eventType="touchUpInside" id="Vji-dz-NbI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roy-bB-Bbc">
@@ -234,9 +234,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ss0-Kp-oHn"/>
                     <connections>
-                        <outlet property="PasswordTextField2" destination="eeS-r1-6ZJ" id="lAx-eF-vza"/>
-                        <outlet property="UserNameTextField2" destination="FOG-vZ-9Gn" id="pA1-5U-Vhk"/>
-                        <outlet property="errorLabel2" destination="roy-bB-Bbc" id="a1H-41-Jcj"/>
+                        <outlet property="errorLabel" destination="roy-bB-Bbc" id="jpl-j8-Sgg"/>
+                        <outlet property="passwordTextField" destination="eeS-r1-6ZJ" id="IdN-Jh-t2l"/>
+                        <outlet property="userNameTextField" destination="FOG-vZ-9Gn" id="whs-nE-Llb"/>
                         <segue destination="9X5-rB-LjZ" kind="modal" identifier="signUp" id="i9F-He-gzI"/>
                     </connections>
                 </viewController>
@@ -244,10 +244,10 @@
             </objects>
             <point key="canvasLocation" x="1827" y="218"/>
         </scene>
-        <!--View Controller-->
+        <!--Logout View Controller-->
         <scene sceneID="pgv-De-nCc">
             <objects>
-                <viewController id="9X5-rB-LjZ" customClass="ViewController" customModule="SwiftLoginApp" sceneMemberID="viewController">
+                <viewController id="9X5-rB-LjZ" customClass="LogoutViewController" customModule="SwiftLoginApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8aS-ex-Yb2"/>
                         <viewControllerLayoutGuide type="bottom" id="BIa-G3-ubz"/>
@@ -288,7 +288,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="modal" identifier="MtoL" id="VzZ-EC-VeU"/>
+                        <segue destination="gkD-pv-LVT" kind="modal" identifier="MtoL" id="iQw-PX-BOH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plm-sv-P89" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,7 +319,6 @@
         <image name="SignUp" width="284" height="107"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wLz-qc-7AF"/>
-        <segue reference="i9F-He-gzI"/>
+        <segue reference="Xzf-qR-6eU"/>
     </inferredMetricsTieBreakers>
 </document>

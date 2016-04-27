@@ -10,48 +10,43 @@ import UIKit
 import NCMB
 
 class LoginViewController: UIViewController {
+    // User Name
+    @IBOutlet weak var userNameTextField: UITextField!
+    // Password
+    @IBOutlet weak var passwordTextField: UITextField!
+    // errorLabel
+    @IBOutlet weak var errorLabel: UILabel!
     
-    @IBOutlet weak var UserNameTextField: UITextField! // User Name
-    @IBOutlet weak var PasswordTextField: UITextField! // Password
-    @IBOutlet weak var errorLabel: UILabel! // errorLabel
-    
+    // 画面表示時に実行される
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        PasswordTextField.secureTextEntry = true
-        errorLabel.text = ""
-        
+        self.passwordTextField.secureTextEntry = true
+        self.errorLabel.text = ""
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    @IBAction func LoginBtn(sender: UIButton) { // Loginボタン押下時の処理
+    // Loginボタン押下時の処理
+    @IBAction func loginBtn(sender: UIButton) {
         // 入力確認
-        if self.UserNameTextField.text!.isEmpty || self.PasswordTextField.text!.isEmpty {
+        if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
             self.errorLabel.text = "未入力の項目があります"
             return
         }
         // ユーザー名とパスワードでログイン
-        NCMBUser.logInWithUsernameInBackground(self.UserNameTextField.text, password: self.PasswordTextField.text, block:({(user: NCMBUser?, error: NSError!) in
-            if (error != nil){
+        NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
+            if error != nil {
                 // ログイン失敗時の処理
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
                 NSLog("ログインに失敗しました:\(error.code)")
-                self.UserNameTextField.text = ""
-                self.PasswordTextField.text = ""
+                self.userNameTextField.text = ""
+                self.passwordTextField.text = ""
             }else{
                 // ログイン成功時の処理
                 self.performSegueWithIdentifier("login", sender: self)
                 NSLog("ログインに成功しました:\(user?.objectId)")
-                
             }
-        }))
+        })
     }
-    @IBAction func toSignUp(sender: UIButton) { // SignUp画面へ遷移
+    // SignUp画面へ遷移
+    @IBAction func toSignUp(sender: UIButton) {
         self.performSegueWithIdentifier("LtoS", sender: self)
     }
 }
