@@ -31,20 +31,22 @@ class LoginViewController: UIViewController {
             self.errorLabel.text = "未入力の項目があります"
             return
         }
+        
         // ユーザー名とパスワードでログイン
         NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
             if error != nil {
+                self.userNameTextField.text = ""
+                self.passwordTextField.text = ""
+                
                 // ログイン失敗時の処理
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
                 NSLog("ログインに失敗しました:\(error.code)")
-                self.userNameTextField.text = ""
-                self.passwordTextField.text = ""
+                
             }else{
                 // ログイン成功時の処理
                 self.performSegueWithIdentifier("login", sender: self)
                 NSLog("ログインに成功しました:\(user?.objectId)")
-                self.userNameTextField.text = ""
-                self.passwordTextField.text = ""
+                
             }
         })
     }
