@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  SwiftLoginApp
 //
-//  Created by Natsumo Ikeda on 2016/04/22.
+//  Created by Natsumo Ikeda on 2016/05/09.
 //  Copyright © 2016年 NIFTY Corporation. All rights reserved.
 //
 
@@ -23,6 +23,7 @@ class LoginViewController: UIViewController {
         self.passwordTextField.secureTextEntry = true
         self.errorLabel.text = ""
     }
+    
     // Loginボタン押下時の処理
     @IBAction func loginBtn(sender: UIButton) {
         // 入力確認
@@ -42,9 +43,12 @@ class LoginViewController: UIViewController {
                 // ログイン成功時の処理
                 self.performSegueWithIdentifier("login", sender: self)
                 NSLog("ログインに成功しました:\(user?.objectId)")
+                self.userNameTextField.text = ""
+                self.passwordTextField.text = ""
             }
         })
     }
+    
     // SignUp画面へ遷移
     @IBAction func toSignUp(sender: UIButton) {
         self.performSegueWithIdentifier("LtoS", sender: self)

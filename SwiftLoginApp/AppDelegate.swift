@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SwiftLoginApp
 //
-//  Created by Natsumo Ikeda on 2016/04/22.
+//  Created by Natsumo Ikeda on 2016/05/09.
 //  Copyright © 2016年 NIFTY Corporation. All rights reserved.
 //
 

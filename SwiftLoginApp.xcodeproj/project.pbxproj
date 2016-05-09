@@ -21,14 +21,14 @@
 		32EB30E8AF192C1860045412 /* Pods-SwiftLoginApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLoginApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLoginApp/Pods-SwiftLoginApp.debug.xcconfig"; sourceTree = "<group>"; };
 		99017194D3D0B37FF65E878D /* Pods_SwiftLoginApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftLoginApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD49DCBE1CC9C9340034F3CB /* SwiftLoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD49DCC11CC9C9340034F3CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD49DCC31CC9C9340034F3CB /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		BD49DCC11CC9C9340034F3CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD49DCC31CC9C9340034F3CB /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LogoutViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BD49DCC61CC9C9340034F3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD49DCC81CC9C9340034F3CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD49DCCB1CC9C9340034F3CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD49DCCD1CC9C9340034F3CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD49DCD31CC9D28B0034F3CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BD49DCD51CC9D2E40034F3CB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BD49DCD31CC9D28B0034F3CB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BD49DCD51CC9D2E40034F3CB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SignUpViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA0EE8F50191C4DE77F27A5B /* Pods-SwiftLoginApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftLoginApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftLoginApp/Pods-SwiftLoginApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,9 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				BD49DCC11CC9C9340034F3CB /* AppDelegate.swift */,
-				BD49DCC31CC9C9340034F3CB /* LogoutViewController.swift */,
 				BD49DCD31CC9D28B0034F3CB /* LoginViewController.swift */,
 				BD49DCD51CC9D2E40034F3CB /* SignUpViewController.swift */,
+				BD49DCC31CC9C9340034F3CB /* LogoutViewController.swift */,
 				BD49DCC51CC9C9340034F3CB /* Main.storyboard */,
 				BD49DCC81CC9C9340034F3CB /* Assets.xcassets */,
 				BD49DCCA1CC9C9340034F3CB /* LaunchScreen.storyboard */,
@@ -333,6 +333,7 @@
 			baseConfigurationReference = 32EB30E8AF192C1860045412 /* Pods-SwiftLoginApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwiftLoginApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilebackend.niftycloud.SwiftLoginApp;
@@ -345,6 +346,7 @@
 			baseConfigurationReference = EA0EE8F50191C4DE77F27A5B /* Pods-SwiftLoginApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SwiftLoginApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobilebackend.niftycloud.SwiftLoginApp;

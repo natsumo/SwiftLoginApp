@@ -2,7 +2,7 @@
 //  LogoutViewController.swift
 //  SwiftLoginApp
 //
-//  Created by Natsumo Ikeda on 2016/04/22.
+//  Created by Natsumo Ikeda on 2016/05/09.
 //  Copyright © 2016年 NIFTY Corporation. All rights reserved.
 //
 
@@ -14,8 +14,9 @@ class LogoutViewController: UIViewController {
     // Logoutボタン押下時の処理
     @IBAction func LogoutBtn(sender: UIButton) {
         NCMBUser.logOut()
-        self.performSegueWithIdentifier("MtoL", sender: self)
+        self.dismissViewControllerAnimated(true, completion: nil)
         NSLog("ログアウトしました")
     }
 }
+
 
