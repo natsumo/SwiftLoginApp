@@ -24,8 +24,16 @@ class LoginViewController: UIViewController {
         self.errorLabel.text = ""
     }
     
+    // 背景タップするとキーボードを隠す
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     // Loginボタン押下時の処理
     @IBAction func loginBtn(sender: UIButton) {
+        // キーボードを閉じる
+        passwordTextField.resignFirstResponder()
+        
         // 入力確認
         if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
             self.errorLabel.text = "未入力の項目があります"
@@ -53,6 +61,9 @@ class LoginViewController: UIViewController {
     
     // SignUp画面へ遷移
     @IBAction func toSignUp(sender: UIButton) {
+        // キーボードを閉じる
+        passwordTextField.resignFirstResponder()
+        
         self.performSegueWithIdentifier("LtoS", sender: self)
     }
 }

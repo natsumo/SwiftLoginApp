@@ -28,8 +28,18 @@ class SignUpViewController: UIViewController {
         self.errorLabel.text = ""
         
     }
+    
+    // 背景タップするとキーボードを隠す
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     // SignUpボタン押下時の距離
     @IBAction func signUpBtn(sender: UIButton) {
+        // キーボードを閉じる
+        passwordTextField.resignFirstResponder()
+        passwordTextField_second.resignFirstResponder()
+        
         // 入力確認
         if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty || self.passwordTextField_second.text!.isEmpty {
             self.errorLabel.text = "未入力の項目があります"
