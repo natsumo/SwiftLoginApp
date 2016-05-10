@@ -136,4 +136,4 @@ NCMBUser.logOut()
 
 ## 参考
 * ニフティクラウドmobile backend の[ドキュメント（会員管理）](http://mb.cloud.nifty.com/doc/current/user/basic_usage_ios.html)をSwift版に書き換えたドキュメントをご用意していますので、ご活用ください
- * http://qiita.com/natsumo/items/25c97182fab4db5629b1
+ * (Swiftでログイン機能をつけてみよう！)[http://qiita.com/natsumo/items/25c97182fab4db5629b1]
