@@ -2,7 +2,7 @@
 ![画像1](/readme-img/001.png)
 
 ## 概要
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の『会員管理機能』を利用してSwiftアプリにログイン機能を実装したサンプルプロジェクトです（Objective-C版は[こちら](https://github.com/natsumo/Objective-cLoginApp)）
+* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の『会員管理機能』を利用してSwiftアプリにログイン機能を実装したサンプルプロジェクトです
 * 簡単な操作ですぐに [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の機能を体験いただけます★☆
 
 ## ニフティクラウドmobile backendって何？？
@@ -61,8 +61,6 @@
 ### 5. 動作確認
 * Xcode画面で左上の実行ボタン（さんかくの再生マーク）をクリックします
 
-====================================ここまで編集済み==================
-
 ![画像12](/readme-img/012.png)
 
 * シミュレーターが起動したら、Login画面が表示されます
@@ -84,11 +82,8 @@
 -----
 
 * 保存に成功したら、[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のダッシュボードから「会員管理」を確認してみましょう！
-* `TestClass`という保存用クラスが作成され、その中にデータが確認できます
 
 ![画像1](/readme-img/001.png)
-
-* Passwordは暗号化され保存されますので表示されません
 
 ## 解説
 サンプルプロジェクトに実装済みの内容のご紹介
@@ -102,7 +97,9 @@
  * `Main.storyboard`でデザインを作成し、`LoginViewController.swift`,`SignUpViewController.swift`,`LogoutViewController.swift`にロジックを書いています
  * ログイン、会員登録、ログアウト部分の処理は以下のように記述されます　※ただし、左記処理以外のコードは除いています
 
-```swift:LoginViewController.swift
+`LoginViewController.swift`
+
+```swift
 // ログイン
 NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
     if error != nil {
@@ -115,7 +112,9 @@ NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: se
 })
 ```
 
-```swift:SignUpViewController.swift
+`SignUpViewController.swift`
+
+```swift
 //会員登録
 user.signUpInBackgroundWithBlock{(error: NSError!) in
     if error != nil {
@@ -128,7 +127,9 @@ user.signUpInBackgroundWithBlock{(error: NSError!) in
 }
 ```
 
-```swift:LogoutViewController.swift
+`LogoutViewController.swift`
+
+```swift
 // ログアウト
 NCMBUser.logOut()
 ```
