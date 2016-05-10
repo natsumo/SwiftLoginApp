@@ -42,10 +42,11 @@ class LoginViewController: UIViewController {
         
         // ユーザー名とパスワードでログイン
         NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
+            // TextFieldを空に
+            self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
+            
             if error != nil {
-                self.userNameTextField.text = ""
-                self.passwordTextField.text = ""
-                
                 // ログイン失敗時の処理
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
                 NSLog("ログインに失敗しました:\(error.code)")

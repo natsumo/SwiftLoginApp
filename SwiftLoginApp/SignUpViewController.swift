@@ -61,11 +61,12 @@ class SignUpViewController: UIViewController {
         
         //会員の登録を行う
         user.signUpInBackgroundWithBlock{(error: NSError!) in
+            // TextFieldを空に
+            self.userNameTextField.text = ""
+            self.passwordTextField.text = ""
+            self.passwordTextField_second.text = ""
+            
             if error != nil {
-                self.userNameTextField.text = ""
-                self.passwordTextField.text = ""
-                self.passwordTextField_second.text = ""
-                
                 // 新規登録失敗時の処理
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
                 NSLog("ログインに失敗しました:\(error.code)")
