@@ -128,7 +128,7 @@
                         <outlet property="errorLabel" destination="Ggq-RR-99S" id="mgu-gV-5Hq"/>
                         <outlet property="passwordTextField" destination="JLM-Sf-91G" id="Y0L-qy-peU"/>
                         <outlet property="userNameTextField" destination="x3c-MC-W4n" id="TGf-Ia-9Kv"/>
-                        <segue destination="S3j-ZT-hjX" kind="push" identifier="LtoS" id="PdY-2R-TAn"/>
+                        <segue destination="S3j-ZT-hjX" kind="push" identifier="loginToSignUp" id="PdY-2R-TAn"/>
                         <segue destination="9X5-rB-LjZ" kind="modal" identifier="login" id="Xzf-qR-6eU"/>
                     </connections>
                 </viewController>

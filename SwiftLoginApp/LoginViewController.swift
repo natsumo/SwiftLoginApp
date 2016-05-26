@@ -69,7 +69,7 @@ class LoginViewController: UIViewController {
         // キーボードを閉じる
         closeKeyboad()
         
-        self.performSegueWithIdentifier("LtoS", sender: self)
+        self.performSegueWithIdentifier("loginToSignUp", sender: self)
     }
     
     // 背景タップするとキーボードを隠す
