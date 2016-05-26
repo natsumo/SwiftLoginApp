@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="21" id="3wx-WQ-wQW"/>
                                     <constraint firstAttribute="width" constant="274" id="MkN-lg-VHl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -358,6 +358,6 @@
         <image name="SignUp" width="284" height="107"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="i9F-He-gzI"/>
+        <segue reference="Xzf-qR-6eU"/>
     </inferredMetricsTieBreakers>
 </document>

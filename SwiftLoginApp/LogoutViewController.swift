@@ -2,7 +2,7 @@
 //  LogoutViewController.swift
 //  SwiftLoginApp
 //
-//  Created by Natsumo Ikeda on 2016/05/09.
+//  Created by Natsumo Ikeda on 2016/05/26.
 //  Copyright © 2016年 NIFTY Corporation. All rights reserved.
 //
 

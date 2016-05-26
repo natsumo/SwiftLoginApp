@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  SwiftLoginApp
 //
-//  Created by Natsumo Ikeda on 2016/05/09.
+//  Created by Natsumo Ikeda on 2016/05/26.
 //  Copyright © 2016年 NIFTY Corporation. All rights reserved.
 //
 
@@ -20,19 +20,20 @@ class LoginViewController: UIViewController {
     // 画面表示時に実行される
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Passwordをセキュリティ入力に設定する
         self.passwordTextField.secureTextEntry = true
-        self.errorLabel.text = ""
-    }
-    
-    // 背景タップするとキーボードを隠す
-    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
+        // TextFieldを空にする
+        cleanTextField()
+        // errorLabelを空にする
+        cleanErrorLabel()
+        // キーボードを閉じる
+        closeKeyboad()
     }
     
     // Loginボタン押下時の処理
     @IBAction func loginBtn(sender: UIButton) {
         // キーボードを閉じる
-        passwordTextField.resignFirstResponder()
+        closeKeyboad()
         
         // 入力確認
         if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
@@ -43,18 +44,17 @@ class LoginViewController: UIViewController {
         // ユーザー名とパスワードでログイン
         NCMBUser.logInWithUsernameInBackground(self.userNameTextField.text, password: self.passwordTextField.text, block:{(user: NCMBUser?, error: NSError!) in
             // TextFieldを空に
-            self.userNameTextField.text = ""
-            self.passwordTextField.text = ""
+            self.cleanTextField()
             
             if error != nil {
                 // ログイン失敗時の処理
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
-                NSLog("ログインに失敗しました:\(error.code)")
+                print("ログインに失敗しました:\(error.code)")
                 
             }else{
                 // ログイン成功時の処理
                 self.performSegueWithIdentifier("login", sender: self)
-                NSLog("ログインに成功しました:\(user?.objectId)")
+                print("ログインに成功しました:\(user?.objectId)")
                 
             }
         })
@@ -62,9 +62,36 @@ class LoginViewController: UIViewController {
     
     // SignUp画面へ遷移
     @IBAction func toSignUp(sender: UIButton) {
+        // TextFieldを空にする
+        cleanTextField()
+        // errorLabelを空に
+        cleanErrorLabel()
         // キーボードを閉じる
-        passwordTextField.resignFirstResponder()
+        closeKeyboad()
         
         self.performSegueWithIdentifier("LtoS", sender: self)
     }
+    
+    // 背景タップするとキーボードを隠す
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    // TextFieldを空にする
+    func cleanTextField(){
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    // errorLabelを空にする
+    func cleanErrorLabel(){
+        errorLabel.text = ""
+    }
+    
+    // キーボードを閉じる
+    func closeKeyboad(){
+        userNameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+
 }
