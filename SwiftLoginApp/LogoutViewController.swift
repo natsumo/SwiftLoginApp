@@ -12,11 +12,13 @@ import NCMB
 class LogoutViewController: UIViewController {
     
     // Logoutボタン押下時の処理
-    @IBAction func LogoutBtn(sender: UIButton) {
+    @IBAction func logoutBtn(sender: UIButton) {
         NCMBUser.logOut()
         self.dismissViewControllerAnimated(true, completion: nil)
-        NSLog("ログアウトしました")
+        print("ログアウトしました")
+        
     }
+    
 }
 
 

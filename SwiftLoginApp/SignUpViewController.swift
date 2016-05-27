@@ -43,11 +43,15 @@ class SignUpViewController: UIViewController {
         // 入力確認
         if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty || self.passwordTextField_second.text!.isEmpty {
             self.errorLabel.text = "未入力の項目があります"
+            // TextFieldを空に
+            self.cleanTextField()
             
             return
             
         } else if passwordTextField.text! != passwordTextField_second.text! {
-            self.errorLabel.text = "passwordが一致しません"
+            self.errorLabel.text = "Passwordが一致しません"
+            // TextFieldを空に
+            self.cleanTextField()
             
             return
             
@@ -70,18 +74,21 @@ class SignUpViewController: UIViewController {
                 self.errorLabel.text = "ログインに失敗しました:\(error.code)"
                 print("ログインに失敗しました:\(error.code)")
                 
-            }else{
+            } else {
                 // 新規登録成功時の処理
                 self.performSegueWithIdentifier("signUp", sender: self)
                 print("ログインに成功しました:\(user.objectId)")
                 
             }
+            
         }
+        
     }
     
     // 背景タップするとキーボードを隠す
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+        
     }
     
     // TextFieldを空にする
@@ -89,11 +96,13 @@ class SignUpViewController: UIViewController {
         userNameTextField.text = ""
         passwordTextField.text = ""
         passwordTextField_second.text = ""
+        
     }
     
     // errorLabelを空にする
     func cleanErrorLabel(){
         errorLabel.text = ""
+        
     }
     
     // キーボードを閉じる
@@ -101,6 +110,7 @@ class SignUpViewController: UIViewController {
         userNameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         passwordTextField_second.resignFirstResponder()
+        
     }
     
 }

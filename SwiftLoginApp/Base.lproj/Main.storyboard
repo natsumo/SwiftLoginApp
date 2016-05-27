@@ -307,7 +307,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
-                                    <action selector="LogoutBtn:" destination="9X5-rB-LjZ" eventType="touchUpInside" id="z6o-m8-hOe"/>
+                                    <action selector="logoutBtn:" destination="9X5-rB-LjZ" eventType="touchUpInside" id="W7Y-eB-UhF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SwiftLoginApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jcx-RW-vHS">

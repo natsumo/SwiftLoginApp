@@ -28,6 +28,7 @@ class LoginViewController: UIViewController {
         cleanErrorLabel()
         // キーボードを閉じる
         closeKeyboad()
+        
     }
     
     // Loginボタン押下時の処理
@@ -38,7 +39,11 @@ class LoginViewController: UIViewController {
         // 入力確認
         if self.userNameTextField.text!.isEmpty || self.passwordTextField.text!.isEmpty {
             self.errorLabel.text = "未入力の項目があります"
+            // TextFieldを空に
+            self.cleanTextField()
+            
             return
+            
         }
         
         // ユーザー名とパスワードでログイン
@@ -57,7 +62,9 @@ class LoginViewController: UIViewController {
                 print("ログインに成功しました:\(user?.objectId)")
                 
             }
+            
         })
+        
     }
     
     // SignUp画面へ遷移
@@ -70,28 +77,33 @@ class LoginViewController: UIViewController {
         closeKeyboad()
         
         self.performSegueWithIdentifier("loginToSignUp", sender: self)
+        
     }
     
     // 背景タップするとキーボードを隠す
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+        
     }
     
     // TextFieldを空にする
     func cleanTextField(){
         userNameTextField.text = ""
         passwordTextField.text = ""
+        
     }
     
     // errorLabelを空にする
     func cleanErrorLabel(){
         errorLabel.text = ""
+        
     }
     
     // キーボードを閉じる
     func closeKeyboad(){
         userNameTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
+        
     }
 
 }
