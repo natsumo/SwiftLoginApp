@@ -16,7 +16,6 @@
 * Mac OS X 10.10(Yosemite)
 * Xcode ver. 7.2.1
 * Simulator ver. 9.2
- * iPhone6(iOS 9.2)
 
 ※上記内容で動作確認をしています。
 
@@ -39,7 +38,7 @@
 
 ### 2. [GitHub](https://github.com/natsumo/SwiftLoginApp.git)からサンプルプロジェクトのダウンロード
 
-* この画面([GitHub](https://github.com/natsumo/ObjcLoginApp.git))の![画像10](/readme-img/010.PNG)ボタンをクリックし、さらに![画像11](/readme-img/011.PNG)ボタンをクリックしてサンプルプロジェクトをMacにダウンロードします
+* この画面([GitHub](https://github.com/natsumo/ObjcLoginApp.git))の![画像10](/readme-img/010.png)ボタンをクリックし、さらに![画像11](/readme-img/011.PNG)ボタンをクリックしてサンプルプロジェクトをMacにダウンロードします
 
 ### 3. Xcodeでアプリを起動
 
@@ -137,3 +136,5 @@ NCMBUser.logOut()
 ## 参考
 * ニフティクラウドmobile backend の[ドキュメント（会員管理）](http://mb.cloud.nifty.com/doc/current/user/basic_usage_ios.html)をSwift版に書き換えたドキュメントをご用意していますので、ご活用ください
  * [Swiftでログイン機能をつけてみよう！](http://qiita.com/natsumo/items/25c97182fab4db5629b1)
+* 同じ内容の【Objective-C】版もご用意しています
+ * https://github.com/natsumo/ObjcLoginApp
