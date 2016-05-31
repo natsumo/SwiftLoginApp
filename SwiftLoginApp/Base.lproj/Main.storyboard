@@ -88,7 +88,7 @@
                                     <action selector="toSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w6J-RW-M6W"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-RR-99S">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-RR-99S">
                                 <rect key="frame" x="163" y="422" width="274" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="3wx-WQ-wQW"/>
@@ -212,7 +212,7 @@
                                     <action selector="signUpBtn:" destination="S3j-ZT-hjX" eventType="touchUpInside" id="Vji-dz-NbI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roy-bB-Bbc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roy-bB-Bbc">
                                 <rect key="frame" x="163" y="422" width="274" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="274" id="gQO-jL-B19"/>
@@ -358,6 +358,6 @@
         <image name="SignUp" width="284" height="107"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xzf-qR-6eU"/>
+        <segue reference="i9F-He-gzI"/>
     </inferredMetricsTieBreakers>
 </document>

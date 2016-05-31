@@ -26,12 +26,6 @@ class SignUpViewController: UIViewController {
         // Passwordをセキュリティ入力に設定
         self.passwordTextField.secureTextEntry = true
         self.passwordTextField_second.secureTextEntry = true
-        // TextFieldを空に
-        cleanTextField()
-        // errorLabelを空に
-        cleanErrorLabel()
-        // キーボードを閉じる
-        closeKeyboad()
         
     }
     

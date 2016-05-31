@@ -22,12 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Passwordをセキュリティ入力に設定する
         self.passwordTextField.secureTextEntry = true
-        // TextFieldを空にする
-        cleanTextField()
-        // errorLabelを空にする
-        cleanErrorLabel()
-        // キーボードを閉じる
-        closeKeyboad()
         
     }
     
