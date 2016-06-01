@@ -38,7 +38,7 @@
 
 ### 2. [GitHub](https://github.com/natsumo/SwiftLoginApp.git)からサンプルプロジェクトのダウンロード
 
-* この画面([GitHub](https://github.com/natsumo/ObjcLoginApp.git))の![画像10](/readme-img/010.png)ボタンをクリックし、さらに![画像11](/readme-img/011.PNG)ボタンをクリックしてサンプルプロジェクトをMacにダウンロードします
+* この画面([GitHub](https://github.com/natsumo/SwiftLoginApp.git))の![画像10](/readme-img/010.png)ボタンをクリックし、さらに![画像11](/readme-img/011.PNG)ボタンをクリックしてサンプルプロジェクトをMacにダウンロードします
 
 ### 3. Xcodeでアプリを起動
 
@@ -70,7 +70,7 @@
 * `User Name`と`Password`を２つ入力して![画像13](/readme-img/013.png)ボタンをタップします
 * 会員登録が成功するとログインされ、下記画面が表示されます
  * このときmBaaS上に会員情報が作成されます！
- * ログインに失敗した場合は画面にエラー内容が表示されます
+ * ログインに失敗した場合は画面にエラーコードが表示されます
  * 万が一エラーが発生した場合は、[こちら](http://mb.cloud.nifty.com/doc/current/rest/common/error.html)よりエラー内容を確認いただけます
 
 ![画像15](/readme-img/015.png)
